@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../../Downloads/a-maze-ng-game/dist"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "dist"
+	}
+}
