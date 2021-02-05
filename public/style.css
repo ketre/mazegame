@@ -76,7 +76,7 @@ body {
 	font-size: 3rem;
 	border: 3px solid rgb(18, 2, 87);
 	border-radius: 50%;
-	color: darkgreen;
+	color: rgb(32, 15, 78);
 	cursor: pointer;
 }
 
@@ -97,6 +97,12 @@ body {
 	font-family: "Vollkorn", serif;
 	font-size: 1.2rem;
 	font-weight: bold;
+}
+#newText {
+	padding: 3px 10px;
+	padding-bottom: 1.2em;
+	text-align: center;
+	margin-right: 20px;
 }
 
 .generate-maze {
@@ -120,7 +126,7 @@ body {
 
 .checkbox {
 	border: 3px solid rgb(18, 2, 87);
-	padding: 3px;
+	/* padding: 3px; */
 	cursor: pointer;
 	width: 45px;
 

@@ -2,11 +2,6 @@ let socket = io();
 
 let newText = document.getElementById('newText');
 
-socket.on('arduino data', (data)=>{
-	console.log(data);
-	newText.innerHTML = 'The last gesture recognized is' + data;
-})
-
 const nrows = Math.floor(innerHeight / 65) - 6;
 const ncols = Math.floor(innerWidth / 65) - 1;
 const burger = `<img src="lotion.png" height="27px" width="27px"></img>`;
@@ -228,6 +223,18 @@ document.body.addEventListener("keydown", function (event) {
 		checkWin();
 	}
 });
+
+socket.on('arduino data', (data)=>{
+	console.log(data);
+	if (play) {
+		cellElements[current.r * ncols + current.c].innerHTML = ``;
+	if (data == 2) upArrowPressed()
+	if (data == 3) {leftArrowPressed();}
+	if (data == 4) {rightArrowPressed();}
+	if (data == 1) {downArrowPressed();}
+	cellElements[current.r * ncols + current.c].innerHTML = cat;
+		checkWin();
+}})
 
 document.body.addEventListener("keyup", function (event) {
 	for (let k = 0; k < directionButtons.length; k++) {
