@@ -1,23 +1,3 @@
-/***************************************************************************
-  This is a library for the APDS9960 digital proximity, ambient light, RGB, and gesture sensor
-
-  This sketch puts the sensor in gesture mode and decodes gestures.
-  To use this, first put your hand close to the sensor to enable gesture mode.
-  Then move your hand about 6" from the sensor in the up -> down, down -> up, 
-  left -> right, or right -> left direction.
-
-  Designed specifically to work with the Adafruit APDS9960 breakout
-  ----> http://www.adafruit.com/products/3595
-
-  These sensors use I2C to communicate. The device's I2C address is 0x39
-
-  Adafruit invests time and resources providing this open source code,
-  please support Adafruit andopen-source hardware by purchasing products
-  from Adafruit!
-
-  Written by Dean Miller for Adafruit Industries.
-  BSD license, all text above must be included in any redistribution
- ***************************************************************************/
 
 #include "Adafruit_APDS9960.h"
 Adafruit_APDS9960 apds;

@@ -4,9 +4,8 @@ let newText = document.getElementById('newText');
 
 const nrows = Math.floor(innerHeight / 65) - 6;
 const ncols = Math.floor(innerWidth / 65) - 1;
-const burger = `<img src="lotion.png" height="27px" width="27px"></img>`;
-const cat = `<img src='virus.png' height="27px" width="27px"></img>`
-console.log('maze works')
+const lotion = `<img src="lotion.png" height="27px" width="27px"></img>`;
+const virus = `<img src='virus.png' height="27px" width="27px"></img>`
 function createCells() {
 	for (let i = 0; i < nrows; i++) {
 		let row = document.createElement("div");
@@ -141,8 +140,8 @@ function BacktrackingDFS() {
 		clearInterval(drawLoop);
 		play = true;
 		cellElements[current.r * ncols + current.c].style.background = "#5429e3";
-		cellElements[goal.r * ncols + goal.c].innerHTML = burger;
-		cellElements[current.r * ncols + current.c].innerHTML = cat;
+		cellElements[goal.r * ncols + goal.c].innerHTML = lotion;
+		cellElements[current.r * ncols + current.c].innerHTML = virus;
 	}
 }
 
@@ -206,7 +205,7 @@ for (let k = 0; k < directionButtons.length; k++) {
 			if (k == 1) leftArrowPressed();
 			if (k == 2) rightArrowPressed();
 			if (k == 3) downArrowPressed();
-			cellElements[current.r * ncols + current.c].innerHTML = cat;
+			cellElements[current.r * ncols + current.c].innerHTML = virus;
 			checkWin();
 		}
 	});
@@ -219,7 +218,7 @@ document.body.addEventListener("keydown", function (event) {
 		if (event.key === "ArrowLeft") leftArrowPressed();
 		if (event.key === "ArrowRight") rightArrowPressed();
 		if (event.key === "ArrowDown") downArrowPressed();
-		cellElements[current.r * ncols + current.c].innerHTML = cat;
+		cellElements[current.r * ncols + current.c].innerHTML = virus;
 		checkWin();
 	}
 });
@@ -232,7 +231,7 @@ socket.on('arduino data', (data)=>{
 	if (data == 3) {leftArrowPressed();}
 	if (data == 4) {rightArrowPressed();}
 	if (data == 1) {downArrowPressed();}
-	cellElements[current.r * ncols + current.c].innerHTML = cat;
+	cellElements[current.r * ncols + current.c].innerHTML = virus;
 		checkWin();
 }})
 

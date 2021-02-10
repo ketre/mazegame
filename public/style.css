@@ -93,9 +93,10 @@ body {
 	justify-content: center;
 	color: rgb(18, 2, 87);
 	margin: 0 10px 20px 10px;
+	font-family: 'VT323', monospace;
 
-	font-family: "Vollkorn", serif;
-	font-size: 1.2rem;
+	/* font-family: "Vollkorn", serif; */
+	font-size: 1.6rem;
 	font-weight: bold;
 }
 #newText {
@@ -103,6 +104,7 @@ body {
 	padding-bottom: 1.2em;
 	text-align: center;
 	margin-right: 20px;
+	font-family: 'VT323', monospace;
 }
 
 .generate-maze {
